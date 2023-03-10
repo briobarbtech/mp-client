@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { items } from "../../utils/data";
 import { kanit } from "../../utils/fonts";
 import PostOrder from "./PostOrder";
+import postOrder from "../../services/post_order";
 
 function IndexContent() {
   const value = useContext(AppContext)
@@ -17,7 +18,7 @@ function IndexContent() {
           key={counter}
           className="item"
           onClick={() => {
-            value.setItem(item)
+           postOrder(item)
           }}
         >
           <div className="item-link">
