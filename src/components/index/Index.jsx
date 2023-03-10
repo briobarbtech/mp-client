@@ -5,14 +5,14 @@ import IndexContent from "./IndexContent";
 
 function Index() {
   return (
-    <>
+    
       <IndexContainer>
         <div className="index-section">
             <h1 className="classTitle">Bienvenido</h1>
             <IndexContent/>
         </div>
       </IndexContainer>
-    </>
+    
   );
 }
 
@@ -20,6 +20,7 @@ export default Index;
 
 const IndexContainer = styled.div`
   .index-section {
+    width: 100%;
     height: 850px;
     background: #fff2e1;
     display: flex;

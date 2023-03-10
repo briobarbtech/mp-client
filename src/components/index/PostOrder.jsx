@@ -1,11 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
+import postOrder from "../../services/post_order";
+import {AppContext} from '../../context/AppContext'
 
 function PostOrder() {
+  const value = useContext(AppContext)
   return (
     <>
       <ButtonContainer>
-        <button className="buttonClass" onClick={() => {}}>
+        <button className="buttonClass" onClick={() => {
+          if (value.item !== '') {
+            postOrder(item);
+          }else{
+            value.setActive(true)
+          }
+        }}>
           Hacer pedido
         </button>
       </ButtonContainer>
@@ -17,6 +26,7 @@ export default PostOrder;
 
 const ButtonContainer = styled.div`
   .buttonClass {
+    margin: 40px;
     font-size: 15px;
     font-family: Arial;
     width: 140px;
