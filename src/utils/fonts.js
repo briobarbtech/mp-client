@@ -1,0 +1,1 @@
+export const kanit = 'Kanit, sans-serif';
